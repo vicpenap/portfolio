@@ -1,0 +1,29 @@
+%{ 
+	page = new Integer(params.get("page"))
+	size = new Integer(params.get("size"))
+	count = photos.size 
+}% 
+
+
+#{set section:'Most interesting' /}
+#{include './photos_common.html' /}
+
+<div id="photo_gallery">
+	#{list photos, as: 'photo'}
+		#{flickr_photo photo /}
+	#{/list}
+	
+	<div id="photo_navigation">
+		<p>
+		#{if page > 1}
+		<span>#{a @Photos.interesting(page-1,size)}< Previous#{/a}</span>
+		#{/if}
+		#{if page > 1 && count == size}
+		<span> | </span>
+		#{/if}
+		#{if count == size}
+		<span>#{a @Photos.interesting(page+1,size)}Next >#{/a}</span>
+		#{/if}
+		</p>
+	</div>
+</div>

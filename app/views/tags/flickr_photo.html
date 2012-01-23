@@ -1,0 +1,10 @@
+<div class="photo" style="width:${_arg.width}px; height:${_arg.height}px;">
+	<a href="${_arg.largePhotoURL}" rel="lightbox-flickr" title="${_arg.title}">
+		<img src="${_arg.photoURL}" width="${_arg.width}"
+			height="${_arg.height}" />
+	</a>
+	<div class="photoinfo">
+		<p>${_arg.title}</p>
+		<p class="date">${_arg.publishedDate.since(true)}</p>
+	</div>
+</div>

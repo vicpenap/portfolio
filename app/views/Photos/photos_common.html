@@ -1,0 +1,18 @@
+#{extends 'main.html' /} 
+#{set title:'Photos' /}
+#{set 'sidebar'}
+<div id="photos_menu">
+<ul class="menu">
+#{menulink 'Most recent', url:@Photos.index(1,5), activeSection:section /}
+#{menulink 'Most interesting', url:@Photos.interesting(1,5), activeSection:section /}
+#{menulink 'Albums', url:@Photos.albums(), activeSection:section /}
+</ul>
+<p><a href="http://www.flickr.com/victorpena/">View on flickr</a></p>
+</div>
+#{/set}
+#{set 'moreScripts'}
+	#{script 'slimbox2.js' /}
+#{/set}
+#{set 'moreStyles'}
+	#{stylesheet 'slimbox2/slimbox2.css' /}
+#{/set}

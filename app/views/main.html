@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>${ play.Play.configuration.getProperty('application.title')}</title>
+<meta charset="${_response_encoding}">
+<link rel="stylesheet" media="screen"
+	href="@{'/public/stylesheets/main.css'}">
+#{get 'moreStyles' /}
+<link rel="shortcut icon" type="image/png"
+	href="@{'/public/images/favicon.png'}">
+<script src="@{'/public/javascripts/jquery-1.5.2.min.js'}"
+	type="text/javascript" charset="${_response_encoding}"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28029052-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+#{get 'moreScripts' /}
+</head>
+<body>
+	<div id="topbar_wrapper">
+		<div id="topbar">
+			#{if title != "Home"}
+			<h1>${ play.Play.configuration.getProperty('application.title')}</h1>
+			#{/if}
+			<div id="topbar_menu">
+				<ul class="menu">
+					#{menulink 'Home', url:@Application.index(), activeSection:title /}
+					*{ #{menulink 'Projects', url:@Projects.index(), activeSection:title /} }*
+					#{menulink 'CV', url:@CV.index(), activeSection:title /}
+					#{menulink 'Photos', url:@Photos.index(1,5), activeSection:title /}
+					#{menulink 'Contact', url:@Contact.index(), activeSection:title /}
+				</ul>
+			</div>
+			<div id="social_networks">
+				%{ networks = models.SocialNetwork.find("order by weight asc, createdAt desc").fetch() }%
+				#{list networks, as: 'network' }
+					<a href="${network.URL}" title="${network.name}"><img src="${network.thumbnailURL}" alt="${network.name}" /></a>
+				#{/list}
+			</div>
+		</div>
+	</div>
+
+	<div id="body">
+		<div id="sidebar">
+			<h1 class="title">
+			#{if title == "Home"}
+				${play.Play.configuration.getProperty('application.home_section_title')}
+			#{/if}
+			#{else}
+				#{get 'title' /}
+			#{/else}
+			</h1>
+			#{get 'sidebar' /}
+		</div>
+		<div id="content">#{doLayout /}</div>
+		<div id="bottombar"></div>
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+# Home page
+GET     /                                       Application.index
+GET		/projects								Projects.index
+
+GET 	/photos									Photos.index(page:'1',size:'5')
+GET 	/photos/page/{page}						Photos.index(size:'5')
+GET 	/photos/size/{size}						Photos.index(page:'1')
+GET 	/photos/page/{page}/size/{size}			Photos.index
+
+GET 	/photos/interesting									Photos.interesting(page:'1',size:'5')
+GET 	/photos/interesting/page/{page}						Photos.interesting(size:'5')
+GET 	/photos/interesting/size/{size}						Photos.interesting(page:'1')
+GET 	/photos/interesting/page/{page}/size/{size}			Photos.interesting
+
+GET		/photos/albums									Photos.albums
+
+GET 	/contact								Contact.index
+
+GET 	/cv										CV.index
+GET 	/cv/pdf									CV.VictorPena_CV
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+
+
+
+# Import CRUD routes
+*		/admin              					module:crud
+
+# Import Secure routes
+*       /                                       module:secure
+
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

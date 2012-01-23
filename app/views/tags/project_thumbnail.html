@@ -1,0 +1,11 @@
+<div class="project_thumbnail ${_parity}">
+	#{if _arg.thumbnailURL}
+	<div class="img_box">
+		<img src="${_arg.thumbnailURL}" alt="${_arg.title}" />
+		<span class="url">${_arg.URL.replace("http://","").replace("www.","")}</span>
+	</div>
+	#{/if}
+	<h2 class="project_title">${_arg.title}</h2>
+	<p class="project_description">${_arg.description}</p>
+	<a href="${_arg.URL}"><img class="spacer" src="@{'/public/images/spacer.gif'}" alt="" /></a>
+</div>

@@ -1,0 +1,15 @@
+<li class="collection_item"><a class="thumbnail_link" href="#" onclick="$('#${_arg.id}').slideToggle(); return false;"><img class="collection_thumbnail" src="${_arg.thumbnail}" alt=""/><span>${_arg.title}</span></a>
+<ul id="${_arg.id}" style="display: none;">
+#{if _arg.collections }
+	#{list _arg.collections, as:'col' }
+		#{flickr_collection col /}	
+	#{/list}
+#{/if}
+
+#{else}
+	#{list _arg.sets, as:'set' }
+		<li><a href="#" onclick="loadAlbum('${set.id}',1); return false;">${set.title}</a></li>
+	#{/list}
+#{/else}
+</ul>
+</li>

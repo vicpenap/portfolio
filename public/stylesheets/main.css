@@ -1,0 +1,292 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, sans-serif;	
+}
+
+body {
+	background-color: #F8F8F8;
+	color: #777;
+	margin: 0 auto;
+}
+
+
+h1,h2,h3, #cv p.element_title {
+	color: #982119;
+	text-transform: lowercase;
+	margin-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #AAA;
+}
+
+a:hover {
+	color: #777;
+	border-bottom: 1px dashed #982119;	
+}
+
+#topbar_wrapper {
+	background-color: #F8F8F8;
+	position: fixed;
+	z-index: 1;
+	width: 100%;	
+	height: 40px;
+	-moz-box-shadow: 0 10px 50px #F8F8F8;
+	-webkit-box-shadow: 0 10px 50px #F8F8F8;
+	box-shadow: 0 10px 50px #F8F8F8;	
+}
+
+#topbar {
+	border-top: 5px solid #982119;
+	width: 100%;
+	background-color: #F2F2F2;
+	height: 40px;
+	-moz-box-shadow: 0 -10px 20px #BBB;
+	-webkit-box-shadow: 0 -10px 20px #BBB;
+	box-shadow: 0 -10px 20px #BBB;	
+}
+
+#topbar h1 {
+	margin: 12px 0 0 12px;
+	font-size: 90%;
+	float: left;	
+	color: #AAA;
+}
+
+#topbar div {
+	top: 30%;
+}
+
+#topbar #topbar_menu {
+	position: relative;
+	margin: auto;
+	width: 250px;
+}
+
+.menu  {
+	margin-bottom: 50px;
+}
+
+.menu li {
+	list-style: none;
+	text-transform: lowercase;
+	margin-bottom: 10px;
+}
+
+.menu li.active a {
+	color: #982119;
+}
+
+#topbar li {
+	display: inline;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#topbar #social_networks {
+	position: absolute;
+	right: 0;
+	margin-right: 10%;
+}
+
+#topbar #social_networks a:hover {
+	border: none;
+}
+
+#body {
+	clear: both;
+}
+
+#sidebar h1.title {
+	font-size: 240%;
+	margin-bottom: 30px;
+}
+
+#sidebar {
+	position: fixed;
+	margin-left: 50px;
+	margin-top: 120px;
+	width: 250px;
+}
+
+#sidebar #tweets {
+	margin-top: 50px;
+	font-size: 72%;
+}
+
+#sidebar .tweet {
+	margin-bottom: 15px;	
+}
+#sidebar .tweetdate {
+	color: #AAA;
+}
+
+#content {
+	position: absolute;
+	left: 350px;
+	margin: 50px 10% 50px 5%;
+	padding-top: 50px;
+	min-width: 500px;
+}
+
+#content p {
+	text-align: justify;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.project_thumbnail {
+	position: relative;
+	clear: both;
+	width: 100%;
+	height: 110px;
+	margin-bottom: 50px;
+}
+
+.project_thumbnail img.spacer {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 110px;
+}
+
+.project_thumbnail .img_box {
+	width: 175px;
+	height: 110px;
+	border: 1px solid #982119;
+	position: relative;
+}
+
+#project_thumbnails .odd .img_box {
+	float: left;
+	margin-right: 20px;
+}
+
+#project_thumbnails .even .img_box {
+	float: right;
+	margin-left: 20px;
+}
+.project_thumbnail .url {
+	background-color: black;
+	opacity: 0.7;
+	font-size: 75%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #AAA;
+	padding: 2px 7px;
+	max-width: 175px;
+}
+
+.photo {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.photo a, #lbCenter a, #lbBottomContainer a {
+	border: none;
+}
+
+.photo img {
+	border: 2px solid #982119;
+	padding: 1px;
+}
+
+.photo .photoinfo {
+	position: absolute;
+	bottom: -3px;
+	left: 3px;
+	background-color: black;
+	width: 100%;
+	opacity: 0.7;
+}
+
+.photo .photoinfo p {
+	margin: 5px 15px 5px 15px;
+}
+
+.photo .photoinfo p.date {
+	font-size: 70%;
+}
+
+#photo_navigation p {
+	text-align: center;
+}
+
+#photo_collection_browser {
+	margin-left: -100px;
+	width: 220px;
+	float: left;
+}
+
+#photo_collection_browser ul {
+	clear: both;
+	margin-bottom: 30px;
+}
+#photo_collection_browser .collection_item {
+	clear: both;
+}
+
+#photo_collection_browser li {
+	list-style: none;
+	margin-left: 15px;
+}
+
+#photo_collection_browser li a.thumbnail_link:hover {
+	border: none;
+}
+
+#photo_collection_browser .collection_thumbnail {
+	width: 60px;
+	margin-right: 10px;
+	margin-top: -5px;
+	margin-bottom: 15px;
+	float: left;
+}
+
+#photo_album {
+	margin-left: 200px;
+}
+
+#photo_album a.img:hover {
+	border: none;
+}
+
+#photo_album img {
+	width: 130px;
+	margin: 5px;
+}
+
+#cv li {
+	list-style: none;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+#cv li#personal_data li {
+	list-style: none;
+	position: relative;
+	margin-bottom: 0;
+}
+
+#cv p.header {
+	position: absolute;
+	left: -190px;
+	width: 160px;
+	top: -15px;
+	text-align: right;
+	color: #AAA;
+	padding-right: 20px;
+}
+
+#cv p.element_title {
+	margin-top: 40px;	
+}
+
+#cv span.highlight {
+	font-weight: bold;
+	color: #666;
+}

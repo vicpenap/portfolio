@@ -1,0 +1,21 @@
+<h3>${set.title}</h3>
+
+#{list set.photos, as:'photo'}
+	<a class="img" href="${photo.largePhotoURL}" rel="lightbox-flickr" title="${photo.title}"><img src="${photo.photoURL}" alt="" /></a>
+#{/list}
+
+
+<div id="photo_navigation">
+	<p>
+	%{ count = set.page*set.pageSize }%
+	#{if set.page > 1}
+		<span><a href="#" onclick="loadAlbum('${set.id}',${new Integer(set.page-1)}); return false;">< Previous</a></span>
+	#{/if}
+	#{if set.page > 1 && count < set.totalSize}
+		<span> | </span>
+	#{/if}
+	#{if count < set.totalSize}
+		<span><a href="#" onclick="loadAlbum('${set.id}',${new Integer(set.page+1)}); return false;">Next ></a></span>
+	#{/if}
+	</p>
+</div>

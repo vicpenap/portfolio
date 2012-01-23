@@ -1,0 +1,30 @@
+#{set section:'Albums' /}
+#{include './photos_common.html' /}
+
+#{set 'moreScripts'}
+	#{script 'slimbox2.js' /}
+<script type="text/javascript">
+   var action = #{jsAction @Photos.viewAlbum(':id', ':page', ':size') /}
+   
+   function loadAlbum(id,page) {
+	   $('#photo_album').html("Loading...");
+		$.get(action({id: id, size: '6', page: page}),function(data) {
+			$('#photo_album').html(data);
+			jQuery("#photo_album a").slimbox();
+		}).error(function() { 
+			$('#photo_album').html("error while retrieving album info"); 
+		}); 
+   }
+</script>
+#{/set}
+
+<div id="photo_collection_browser">
+<ul>
+	#{list collections, as:'collection'}
+		#{flickr_collection collection /}
+	#{/list}
+</ul>
+</div>
+
+<div id="photo_album">
+</div>
