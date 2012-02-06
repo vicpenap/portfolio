@@ -21,8 +21,8 @@ GET		/photos/albums									Photos.albums
 
 GET 	/contact								Contact.index
 
-GET 	/cv										CV.index
-GET 	/cv/pdf									CV.VictorPena_CV
+GET 	/cv										CVs.index
+GET 	/cv/pdf									CVs.VictorPena_CV
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

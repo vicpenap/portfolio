@@ -11,17 +11,17 @@ body {
 }
 
 p {
-	margin-bottom: 0;
+	margin-bottom: 5px;
 }
 
-.highlight {
+strong {
 	font-weight: bold;
 }
 
-.element_title {
+h1 {
 	font-weight: bold;
-	margin-top: 40px;
-	margin-bottom: 20px;
+	margin-top: 60px;
+	margin-bottom: 10px;
 }
 
 li {
@@ -39,11 +39,10 @@ div#cv_body {
 	border-left: 2px solid black;
 	padding-left: 20px;
 	margin-bottom: 60px;
+	margin-top: 60px;
 }
 
-ul.element_body p {
-	position: relative;
-	top: -21px;
+p {
 	text-align: justify;
 }
 
@@ -51,27 +50,11 @@ li p {
 	position: relative;
 	left: 200px;
 }
-.header {
+
+p code {
 	position: relative;
-	left: 0 !important;
-	top: -2px !important;
+	left: -200px !important;
+	top: 24px !important;
 	text-align: right !important;
 	width: 150px;	
-}
-
-div#personal_data {
-	margin-top: 10px;
-	text-align: right;
-	position: relative;
-	top: 0;
-	left: 110%;
-	width: 200px;
-}
-
-div#personal_data .title {
-	display: none;
-}
-
-div#personal_data p {
-	margin-bottom: 6px;
 }

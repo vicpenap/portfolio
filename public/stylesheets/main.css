@@ -108,7 +108,7 @@ a:hover {
 	position: fixed;
 	margin-left: 50px;
 	margin-top: 120px;
-	width: 250px;
+	width: 220px;
 }
 
 #sidebar #tweets {
@@ -260,33 +260,41 @@ a:hover {
 	margin: 5px;
 }
 
+
+.cv-updatedAt {
+	width: 150px;
+}
+
+
 #cv li {
 	list-style: none;
 	position: relative;
 	margin-bottom: 40px;
 }
 
-#cv li#personal_data li {
+#cv ul:first-of-type  li {
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
 }
 
-#cv p.header {
+#cv p code {
 	position: absolute;
-	left: -190px;
+	left: -180px;
 	width: 160px;
-	top: -15px;
+	top: 0px;
 	text-align: right;
 	color: #AAA;
 	padding-right: 20px;
 }
 
-#cv p.element_title {
+#cv h1 {
 	margin-top: 40px;	
+	font-size: 150%;
+	
 }
 
-#cv span.highlight {
+#cv strong {
 	font-weight: bold;
 	color: #666;
 }

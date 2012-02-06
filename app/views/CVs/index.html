@@ -1,0 +1,10 @@
+#{extends 'main.html' /} 
+#{set title:'CV' /} 
+#{set 'sidebar'}
+<ul class="menu">
+	<li>#{a @CVs.VictorPena_CV()}download in PDF#{/a}</li>
+</ul>
+<p class="cv-updatedAt">Updated ${cv.updatedAt.since(true)}</p>
+#{/set}
+
+#{cv cv /}
