@@ -4,5 +4,4 @@ require:
     - play
     - play -> crud   
     - play -> secure 
-    - play -> pdf 0.6
     - play -> markdown 1.5

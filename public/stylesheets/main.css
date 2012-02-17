@@ -278,11 +278,11 @@ a:hover {
 	margin-bottom: 0;
 }
 
-#cv p code {
+#cv li p:first-of-type {
 	position: absolute;
 	left: -180px;
 	width: 160px;
-	top: 0px;
+	top: -15px;
 	text-align: right;
 	color: #AAA;
 	padding-right: 20px;

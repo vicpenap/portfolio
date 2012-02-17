@@ -1,7 +1,5 @@
 package controllers;
 
-import static play.modules.pdf.PDF.renderPDF;
-
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +15,6 @@ public class CVs extends Controller {
 	
 	public static void VictorPena_CV() {
 		CV cv = CV.find("order by weight asc, updatedAt desc").first();
-		renderPDF(cv);
+		render(cv);
 	}
 }
