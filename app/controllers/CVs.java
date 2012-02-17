@@ -13,7 +13,7 @@ public class CVs extends Controller {
 		render(cv);
 	}
 	
-	public static void VictorPena_CV() {
+	public static void printCV() {
 		CV cv = CV.find("order by weight asc, updatedAt desc").first();
 		render(cv);
 	}
